@@ -1,0 +1,5 @@
+.heading-h1 {
+    font-size: var(--font-xlg);
+    text-align: center;
+    font-weight: var(--font-semibold)
+}
