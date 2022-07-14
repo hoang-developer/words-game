@@ -3,3 +3,9 @@
     text-align: center;
     font-weight: var(--font-semibold)
 }
+.heading-subtitle {
+    color:white;
+    font-size: var(--font-md);
+    text-align: center;
+    font-weight: var(--font-medium);
+}
