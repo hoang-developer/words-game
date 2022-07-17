@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import KeyBoard from '../Keyboard/KeyBoard'
 import Square from '../Square/Square'
 import "./board.css"
@@ -13,9 +13,9 @@ const Board: React.FC<IProps> = (props) => {
     <div className="board">
         {board.map((square, i) =>{
             return (
-                <>
+                <Fragment key={i}>
                 <Square val={square} squareIdx={i}/>
-                </>
+                </Fragment>
             )
         })}
     </div>

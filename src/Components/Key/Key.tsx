@@ -12,8 +12,11 @@ const Key: React.FC<IProps> = (props) => {
     const board = useSelector((state: rootState)=> state.board.board)
     const positon = useSelector((state: rootState)=> state.board.pos)
     const dispatch = useDispatch()
+    let currentRow = Math.floor(positon/5)
+    const row = useSelector((state: rootState)=> state.board.row)
     const chooseLetter = () => {
         if (positon >= 30) return;
+        if (currentRow > row ) return;
         const newBoard = [...board]
         newBoard[positon] = letter
         dispatch(setBoard(newBoard))
