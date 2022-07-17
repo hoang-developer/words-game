@@ -52,7 +52,7 @@ const KeyBoard: React.FC = () => {
     <div className="keyboard-container">
       {rows.map((row, i) => {
         return (
-          <div className="row" key={i}>
+          <div role={`row-${i}`} className="row" key={i}>
             {i === 2 && (
               <span className="letter-row" onClick={clickEnter}>
                 Enter

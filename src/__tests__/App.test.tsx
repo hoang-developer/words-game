@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../App";
 import React from "react";
 import "@testing-library/jest-dom";
@@ -7,7 +7,7 @@ import store from "../redux/store";
 
 
 describe('Test Interface', () => {
-test("Should have header text Words Game", () => {
+test("Should have header text", () => {
   render(
     <Provider store={store}>
       <App />
@@ -30,3 +30,4 @@ test("Should have subtitle text", () => {
     expect(subtitle).toHaveTextContent(expectedText);
   });
 })
+
