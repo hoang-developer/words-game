@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Heading type="h1" text="Words Game"/>
-      <Heading type="subtitle" text="This is A Demo App for Learning TypeScript"/>
+      <Heading type="subtitle" text="This is a Demo App for Learning TypeScript"/>
       <div className="board-container">
         <Board board={board} />
       </div>
