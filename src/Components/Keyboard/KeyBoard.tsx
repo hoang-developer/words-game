@@ -61,7 +61,7 @@ const KeyBoard: React.FC = () => {
             {row.split(" ").map((letter, i) => {
               return (
                 <div className="letter-row" key={i}>
-                  <Key letter={letter.toUpperCase()} data-testid={`letter-${letter}`}/>
+                  <Key letter={letter.toUpperCase()} />
                   {letter === "m" && <span onClick={clickBack}> Back </span>}
                 </div>
               );

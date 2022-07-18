@@ -10,7 +10,7 @@ const Board: React.FC<IProps> = (props) => {
     const {board} = props
   return (
     <>
-    <div className="board">
+    <div className="board" role="board">
         {board.map((square, i) =>{
             return (
                 <Fragment key={i}>

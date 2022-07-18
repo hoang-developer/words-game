@@ -23,7 +23,7 @@ const Key: React.FC<IProps> = (props) => {
         dispatch(incPos())
     }
   return (
-    <div className="letter" onClick={chooseLetter}>{letter}</div>
+    <div className="letter" onClick={chooseLetter} data-testid={`letter-${letter}`}>{letter}</div>
   )
 }
 

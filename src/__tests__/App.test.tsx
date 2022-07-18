@@ -4,6 +4,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import store from "../redux/store";
+import userEvent from "@testing-library/user-event";
 
 
 describe('Test Interface', () => {
@@ -29,5 +30,20 @@ test("Should have subtitle text", () => {
     const expectedText = "This is a Demo App for Learning TypeScript";
     expect(subtitle).toHaveTextContent(expectedText);
   });
+
+  test("Should display letter after click key", () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    const key = screen.getByTestId("letter-A");
+    userEvent.click(key)
+    const board = screen.getByRole("board");
+
+    expect(board).toHaveTextContent("A");
+  });
+
+  
 })
 
